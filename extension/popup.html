@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AEGIS Extension</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      background-color: #050505;
+      color: #FFFFFF;
+      font-family: ui-monospace, Menlo, Monaco, monospace;
+      font-size: 12px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #D4AF37;
+    }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      color: #8FD3FF;
+    }
+    .btn {
+      width: 100%;
+      background: #D4AF37;
+      color: #050505;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .btn:hover {
+      background: #FFE680;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="title">AEGIS CYBER-SHIELD</span>
+  </div>
+  <div class="status-row">
+    <span>Status:</span>
+    <span style="color: #8FD3FF; font-weight: bold;">ACTIVE</span>
+  </div>
+  <div class="status-row">
+    <span>Mode:</span>
+    <span>Auto-Scan On</span>
+  </div>
+  <div class="status-row">
+    <span>Supported Adapters:</span>
+    <span>Amazon / Flipkart</span>
+  </div>
+  <button id="open-dash" class="btn">OPEN MY AEGIS DASHBOARD</button>
+  <script>
+    document.getElementById('open-dash')?.addEventListener('click', () => {
+      chrome.tabs.create({ url: 'http://localhost:3000/dashboard' });
+    });
+  </script>
+</body>
+</html>

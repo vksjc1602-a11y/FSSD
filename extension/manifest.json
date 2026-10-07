@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "AEGIS - AI Security Layer for Digital Commerce",
+  "version": "1.0.0",
+  "description": "Autonomous consumer cyber-defense platform detecting scams, price anomalies, and suspicious sellers with real-time 3D risk visualization.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.in/*",
+    "*://*.flipkart.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AEGIS Protection"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.in/*",
+        "*://*.flipkart.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AEGIS - AI Security Layer for Digital Commerce",
+  "description": "AI-powered consumer security platform detecting e-commerce scams, price anomalies, suspicious sellers, and review manipulation with real-time 3D risk visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
